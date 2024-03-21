@@ -1,2 +1,2 @@
 # Wedding Website
-Just the beginning...
+This is the official website for my wedding.
