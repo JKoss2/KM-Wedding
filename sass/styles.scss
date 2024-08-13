@@ -611,18 +611,41 @@ Venues
     padding-left: 100px;
     border-left: solid 1px $keyline-color;
   }
-
   .time {
     font-size: 13px;
     font-style: italic;
     text-transform: lowercase;
     color: $txt-primary;
   }
-
   .img-wrap {
     position: relative;
     overflow: hidden;
     border-radius: 4px;
+  }
+  .carousel-wrapper {
+    padding: 0;
+  }
+  .carousel-indicators{
+    bottom: 80px;
+  }
+  .carousel-caption {
+    padding-bottom: 0;
+  }
+  .carousel-control{
+    border-radius: 4px;
+  }
+  .item {
+    height: 320px;
+    overflow: hidden;
+    width: 100%;
+  }
+  .item img {
+    width: 100%;
+  }
+  h4, p {
+    color: inherit;
+    padding: 0;
+    margin: 2px 0;
   }
 }
 
@@ -1136,8 +1159,13 @@ FAQ's Accordion
     width: 100%;
     text-align: left;
     border: none;
+    border-radius: 4px;
     outline: none;
     transition: 0.4s;
+  }
+
+  .BR-OR {
+    border-radius: 4px 4px 0 0;
   }
 
   /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
@@ -1151,8 +1179,15 @@ FAQ's Accordion
     padding: 0 18px;
     background-color: white;
     max-height: 0;
+    text-align: center;
     overflow: hidden;
     transition: max-height 0.2s ease-out;
+
+    p {
+      padding-top: 10px;
+      padding-bottom: 0;
+    }
+
   }
 
   .accordion:after {
