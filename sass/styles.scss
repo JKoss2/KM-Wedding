@@ -735,6 +735,9 @@ Timeline
   list-style: none;
   padding: 20px 0 20px;
   position: relative;
+  .glyphicon {
+    top: 4px;
+  }
 }
 
 .timeline:before {
