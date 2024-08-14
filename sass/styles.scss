@@ -579,7 +579,7 @@ Features-stack
 }
 
 /* ==========================================================================
-Timeline/Attire (events)
+Events
 ========================================================================== */
 .events {
   .leftcol {
@@ -617,8 +617,11 @@ Venues
     text-transform: lowercase;
     color: $txt-primary;
   }
+  .address {
+    margin-bottom: 10px;
+  }
   .img-wrap {
-    position: relative;
+    //position: relative;
     overflow: hidden;
     border-radius: 4px;
   }
