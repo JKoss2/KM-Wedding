@@ -301,6 +301,12 @@
         margin: 50px 0 50px 0;
     }
 
+    .FB_iframe {
+        max-width: 100% !important;
+        width: auto !important;
+        height: auto !important;
+    }
+
 }
 
 @media screen and (max-width: 480px) {
