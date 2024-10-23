@@ -122,28 +122,38 @@
         </div>
     </section>
 
-    <section id="venues" class="venues section-padding">
-        <div class="container">
-            <div class="row section-padding">
-                <h3 class="header text-center">Venues</h3>
-                <div class="col-md-6 col-sm-12 col-xs-12 leftcol text-center">
-                    <div class="wp3">
-                        <p><strong>Corpus Christi Catholic Church</strong></p>
-                        <p class="address"><a href="https://maps.apple.com/?address=1050%20Celebration%20Ave,%20Celebration,%20FL%2034747,%20United%20States&auid=4086847638451592103&ll=28.312466,-81.547812&lsp=9902&q=Corpus%20Christi%20Catholic%20Church&_ext=CjIKBQgEEOIBCgQIBRADCgQIBhB9CgQIChAACgQIUhAHCgQIVRAPCgQIWRABCgUIpAEQARImKT+RJ0nXTjxAMTk28cRiY1TAOeLHPQIkUTxAQVljGpe7YlTAUAM%3D">1050 Celebration Ave, Celebration, FL 34747</a></p>
-                        <div id="church_event_img" class="col-md-12">
-                            <div class="img-wrap">
-                                <img src="img/Corpuschristichurchlakeelevation.jpg" width="100%" alt="">
-                            </div>
+    <section id="map" class="map section-padding">
+        <div class="header text-center">
+            <h3>Local Map</h3>
+        </div>
+        <div id="map-canvas"></div>
+        <div id="map-content-wrapper" class="container pointer-events-none">
+            <div class="row">
+                <div class="col-xs-offset-1 col-xs-10 col-md-offset-3 col-md-6">
+                    <div class="text-center">
+                        <div data-analytics_click="map_return-btn" id="btn-show-content" class="toggle-map-content pointer-events-auto">
+                            <i class="fa fa-info-circle"></i>&nbsp;&nbsp; Back to info
                         </div>
                     </div>
-                </div>
-                <div class="col-md-6 col-sm-12 col-xs-12 rightcol text-center">
-                    <div class="wp4">
-                        <p><strong>Gaylord Palms Resort & Convention Center</strong></p>
-                        <p class="address"><a href="https://maps.apple.com/?address=6000%20W%20Osceola%20Pkwy,%20Kissimmee,%20FL%20%2034746,%20United%20States&auid=8818934965671364271&ll=28.343084,-81.526052&lsp=9902&q=Gaylord%20Palms%20Resort%20%26%20Convention%20Center&_ext=CjIKBQgEEOIBCgQIBRADCgQIBhALCgQIChAACgQIUhADCgQIVRANCgQIWRABCgUIpAEQARImKTlunQauVjxAMSk6VHT+YVTAOTUZ6b76WDxAQf8DNDpXYVTAUAQ%3D">6000 W Osceola Parkway, Kissimmee, Florida 34746</a></p>
-                        <div id="reception_event_image" class="col-md-12">
-                            <div class="img-wrap">
-                                <img src="img/GaylordConventionCenterFrontElevation.jpg" width="100%" alt="">
+                    <div id="map-content" class="pointer-events-auto">
+                        <div class="row">
+                            <div class="col-md-6 text-center">
+                                <h4>Ceremony</h4>
+                                <h5>Corpus Christi<br>Catholic Church</h5>
+                                <p><a data-analytics_click="map_export" href="https://maps.apple.com/?address=1050%20Celebration%20Ave,%20Celebration,%20FL%2034747,%20United%20States&auid=4086847638451592103&ll=28.312466,-81.547812&lsp=9902&q=Corpus%20Christi%20Catholic%20Church&_ext=CjIKBQgEEOIBCgQIBRADCgQIBhB9CgQIChAACgQIUhAHCgQIVRAPCgQIWRABCgUIpAEQARImKT+RJ0nXTjxAMTk28cRiY1TAOeLHPQIkUTxAQVljGpe7YlTAUAM%3D">1050 Celebration Ave,<br>Celebration, FL 34747</a></p>
+                                <a data-analytics_click="map_show-ceremony" class="btn btn-accent btn-small" id="btn-show-ceremony"><i class="fa fa-map-marker"></i>&nbsp;&nbsp;Show on Map</a>
+                            </div>
+                            <div class="col-md-6 text-center">
+                                <h4>Reception</h4>
+                                <h5>Gaylord Palms<br>Resort</h5>
+                                <p><a data-analytics_click="map_export" href="https://maps.apple.com/?address=6000%20W%20Osceola%20Pkwy,%20Kissimmee,%20FL%20%2034746,%20United%20States&auid=8818934965671364271&ll=28.343084,-81.526052&lsp=9902&q=Gaylord%20Palms%20Resort%20%26%20Convention%20Center&_ext=CjIKBQgEEOIBCgQIBRADCgQIBhALCgQIChAACgQIUhADCgQIVRANCgQIWRABCgUIpAEQARImKTlunQauVjxAMSk6VHT+YVTAOTUZ6b76WDxAQf8DNDpXYVTAUAQ%3D">6000 W Osceola Parkway,<br>Kissimmee, Florida 34746</a></p>
+                                <a data-analytics_click="map_show-reception" class="btn btn-accent btn-small" id="btn-show-reception"><i class="fa fa-map-marker"></i>&nbsp;&nbsp;Show on Map</a>
+                            </div>
+                        </div>
+                        <div class="row text-center">
+                            <div class="col" style="padding: 25px 5px 5px;">
+                                <a data-analytics_click="map_show-route" class="btn btn-accent btn-small" id="btn-show-both"><i class="fa fa-map-marker"></i>&nbsp;&nbsp;Show Both / Route</a>
+                                <br><p style="margin-top: 10px; margin-bottom: 0; padding-bottom: 0">Click on the addresses above to put them into your device's GPS.</p>
                             </div>
                         </div>
                     </div>
@@ -391,37 +401,28 @@
 <!--        </div>-->
 <!--    </section>-->
 
-    <section id="map" class="map section-padding">
-        <div class="header text-center">
-            <h3>Local Map</h3>
-        </div>
-        <div id="map-canvas"></div>
-        <div id="map-content-wrapper" class="container pointer-events-none">
-            <div class="row">
-                <div class="col-xs-offset-1 col-xs-10 col-md-offset-3 col-md-6">
-                    <div class="text-center">
-                        <div data-analytics_click="map_return-btn" id="btn-show-content" class="toggle-map-content pointer-events-auto">
-                            <i class="fa fa-info-circle"></i>&nbsp;&nbsp; Back to info
+    <section id="venues" class="venues section-padding">
+        <div class="container">
+            <div class="row section-padding">
+                <h3 class="header text-center">Venues (addresses clickable)</h3>
+                <div class="col-md-6 col-sm-12 col-xs-12 leftcol text-center">
+                    <div class="wp3">
+                        <p><strong>Corpus Christi Catholic Church</strong></p>
+                        <p class="address"><a href="https://maps.apple.com/?address=1050%20Celebration%20Ave,%20Celebration,%20FL%2034747,%20United%20States&auid=4086847638451592103&ll=28.312466,-81.547812&lsp=9902&q=Corpus%20Christi%20Catholic%20Church&_ext=CjIKBQgEEOIBCgQIBRADCgQIBhB9CgQIChAACgQIUhAHCgQIVRAPCgQIWRABCgUIpAEQARImKT+RJ0nXTjxAMTk28cRiY1TAOeLHPQIkUTxAQVljGpe7YlTAUAM%3D">1050 Celebration Ave, Celebration, FL 34747</a></p>
+                        <div id="church_event_img" class="col-md-12">
+                            <div class="img-wrap">
+                                <img src="img/Corpuschristichurchlakeelevation.jpg" width="100%" alt="">
+                            </div>
                         </div>
                     </div>
-                    <div id="map-content" class="pointer-events-auto">
-                        <div class="row">
-                            <div class="col-md-6 text-center">
-                                <h4>Ceremony</h4>
-                                <h5>Corpus Christi<br>Catholic Church</h5>
-                                <p><a data-analytics_click="map_export" href="https://maps.apple.com/?address=1050%20Celebration%20Ave,%20Celebration,%20FL%2034747,%20United%20States&auid=4086847638451592103&ll=28.312466,-81.547812&lsp=9902&q=Corpus%20Christi%20Catholic%20Church&_ext=CjIKBQgEEOIBCgQIBRADCgQIBhB9CgQIChAACgQIUhAHCgQIVRAPCgQIWRABCgUIpAEQARImKT+RJ0nXTjxAMTk28cRiY1TAOeLHPQIkUTxAQVljGpe7YlTAUAM%3D">1050 Celebration Ave,<br>Celebration, FL 34747</a></p>
-                                <a data-analytics_click="map_show-ceremony" class="btn btn-accent btn-small" id="btn-show-ceremony"><i class="fa fa-map-marker"></i>&nbsp;&nbsp;Show on Map</a>
-                            </div>
-                            <div class="col-md-6 text-center">
-                                <h4>Reception</h4>
-                                <h5>Gaylord Palms<br>Resort</h5>
-                                <p><a data-analytics_click="map_export" href="https://maps.apple.com/?address=6000%20W%20Osceola%20Pkwy,%20Kissimmee,%20FL%20%2034746,%20United%20States&auid=8818934965671364271&ll=28.343084,-81.526052&lsp=9902&q=Gaylord%20Palms%20Resort%20%26%20Convention%20Center&_ext=CjIKBQgEEOIBCgQIBRADCgQIBhALCgQIChAACgQIUhADCgQIVRANCgQIWRABCgUIpAEQARImKTlunQauVjxAMSk6VHT+YVTAOTUZ6b76WDxAQf8DNDpXYVTAUAQ%3D">6000 W Osceola Parkway,<br>Kissimmee, Florida 34746</a></p>
-                                <a data-analytics_click="map_show-reception" class="btn btn-accent btn-small" id="btn-show-reception"><i class="fa fa-map-marker"></i>&nbsp;&nbsp;Show on Map</a>
-                            </div>
-                        </div>
-                        <div class="row text-center">
-                            <div class="col" style="padding: 25px 5px;">
-                                <a data-analytics_click="map_show-route" class="btn btn-accent btn-small" id="btn-show-both"><i class="fa fa-map-marker"></i>&nbsp;&nbsp;Show Both / Route</a>
+                </div>
+                <div class="col-md-6 col-sm-12 col-xs-12 rightcol text-center">
+                    <div class="wp4">
+                        <p><strong>Gaylord Palms Resort & Convention Center</strong></p>
+                        <p class="address"><a href="https://maps.apple.com/?address=6000%20W%20Osceola%20Pkwy,%20Kissimmee,%20FL%20%2034746,%20United%20States&auid=8818934965671364271&ll=28.343084,-81.526052&lsp=9902&q=Gaylord%20Palms%20Resort%20%26%20Convention%20Center&_ext=CjIKBQgEEOIBCgQIBRADCgQIBhALCgQIChAACgQIUhADCgQIVRANCgQIWRABCgUIpAEQARImKTlunQauVjxAMSk6VHT+YVTAOTUZ6b76WDxAQf8DNDpXYVTAUAQ%3D">6000 W Osceola Parkway, Kissimmee, Florida 34746</a></p>
+                        <div id="reception_event_image" class="col-md-12">
+                            <div class="img-wrap">
+                                <img src="img/GaylordConventionCenterFrontElevation.jpg" width="100%" alt="">
                             </div>
                         </div>
                     </div>
